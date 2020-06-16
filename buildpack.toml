@@ -1,0 +1,47 @@
+# Copyright 2018-2020 the original author or authors.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+api = "0.2"
+
+[buildpack]
+id       = "paketo-buildpacks/java-native-image"
+name     = "Paketo Java Native Image Buildpack"
+version  = "{{.version}}"
+homepage = "https://github.com/paketo-buildpacks/java-native-image"
+
+[[order]]
+group = [
+
+### Order is strictly enforced
+  { id = "paketo-buildpacks/graalvm",        version="0.0.0" },
+  { id = "paketo-buildpacks/gradle",         version="0.0.0", optional = true },
+  { id = "paketo-buildpacks/maven",          version="0.0.0", optional = true },
+  { id = "paketo-buildpacks/sbt",            version="0.0.0", optional = true },
+
+### Order determines precedence
+  { id = "paketo-buildpacks/executable-jar", version="0.0.0", optional = true },
+  { id = "paketo-buildpacks/spring-boot",    version="0.0.0", optional = true },
+  { id = "paketo-buildpacks/procfile",       version="0.0.0", optional = true },
+
+### Order is strictly enforced
+  { id = "paketo-buildpacks/image-labels",   version="0.0.0", optional = true },
+]
+
+[metadata]
+include-files = [
+  "LICENSE",
+  "NOTICE",
+  "README.md",
+  "buildpack.toml",
+]
