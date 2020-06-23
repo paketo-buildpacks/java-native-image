@@ -1,5 +1,5 @@
 # `gcr.io/paketo-buildpacks/java-native-image`
-The Paketo Java Buildpack is a Cloud Native Buildpack with an order definition suitable for Java native image applications.
+The Paketo Java Native Image Buildpack is a Cloud Native Buildpack with an order definition suitable for Java native image applications.
 
 ## Included Buildpacks
 * [`paketo-buildpacks/executable-jar`](https://github.com/paketo-buildpacks/executable-jar)
