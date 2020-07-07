@@ -1,5 +1,5 @@
 dependencies = [
-  { image = "gcr.io/paketo-buildpacks/executable-jar:1.2.7" },
+  { image = "gcr.io/paketo-buildpacks/executable-jar:1.2.8" },
   { image = "gcr.io/paketo-buildpacks/graalvm:1.6.0" },
   { image = "gcr.io/paketo-buildpacks/gradle:1.4.0" },
   { image = "gcr.io/paketo-buildpacks/image-labels:1.1.0" },
