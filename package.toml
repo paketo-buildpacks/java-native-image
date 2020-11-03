@@ -1,5 +1,5 @@
 dependencies = [
-  { image = "gcr.io/paketo-buildpacks/ca-certificates:0.0.0" },
+  { image = "gcr.io/paketo-buildpacks/ca-certificates:1.0.0" },
   { image = "gcr.io/paketo-buildpacks/environment-variables:2.1.1" },
   { image = "gcr.io/paketo-buildpacks/executable-jar:3.1.2" },
   { image = "gcr.io/paketo-buildpacks/graalvm:3.3.0" },
@@ -10,5 +10,5 @@ dependencies = [
   { image = "gcr.io/paketo-buildpacks/procfile:2.0.3" },
   { image = "gcr.io/paketo-buildpacks/sbt:3.4.0" },
   { image = "gcr.io/paketo-buildpacks/spring-boot:3.3.0" },
-  { image = "gcr.io/paketo-buildpacks/spring-boot-native-image:1.4.0" },
+  { image = "gcr.io/paketo-buildpacks/spring-boot-native-image:1.5.0" },
 ]
