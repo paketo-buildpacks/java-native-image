@@ -2,7 +2,6 @@
 The Paketo Java Native Image Buildpack is a Cloud Native Buildpack with an order definition suitable for Java native image applications.
 
 ## Included Buildpacks
-* [`paketo-buildpacks/ca-certificates`](https://github.com/paketo-buildpacks/ca-certificates)
 * [`paketo-buildpacks/environment-variables`](https://github.com/paketo-buildpacks/environment-variables)
 * [`paketo-buildpacks/executable-jar`](https://github.com/paketo-buildpacks/executable-jar)
 * [`paketo-buildpacks/graalvm`](https://github.com/paketo-buildpacks/graalvm)
