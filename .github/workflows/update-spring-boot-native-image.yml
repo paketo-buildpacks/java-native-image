@@ -105,6 +105,7 @@ jobs:
                 DEPENDENCY: gcr.io/paketo-buildpacks/spring-boot-native-image
             - uses: peter-evans/create-pull-request@v3
               with:
+                author: ${{ secrets.JAVA_GITHUB_USERNAME }} <${{ secrets.JAVA_GITHUB_USERNAME }}@users.noreply.github.com>
                 body: Bumps [`gcr.io/paketo-buildpacks/spring-boot-native-image`](https://gcr.io/paketo-buildpacks/spring-boot-native-image) from [`${{ steps.package.outputs.old-version }}`](https://gcr.io/paketo-buildpacks/spring-boot-native-image:${{ steps.package.outputs.old-version }}) to [`${{ steps.package.outputs.new-version }}`](https://gcr.io/paketo-buildpacks/spring-boot-native-image:${{ steps.package.outputs.new-version }}).
                 branch: update/package/spring-boot-native-image
                 commit-message: |-
