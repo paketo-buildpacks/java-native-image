@@ -3,7 +3,7 @@
   uri = "docker://gcr.io/paketo-buildpacks/ca-certificates:2.4.1"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/upx:1.1.1"
+  uri = "docker://gcr.io/paketo-buildpacks/upx:1.1.2"
 
 [[dependencies]]
   uri = "docker://gcr.io/paketo-buildpacks/graalvm:6.4.2"
