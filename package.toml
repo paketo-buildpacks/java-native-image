@@ -6,7 +6,7 @@
   uri = "docker://gcr.io/paketo-buildpacks/upx:1.1.2"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/graalvm:6.5.0"
+  uri = "docker://gcr.io/paketo-buildpacks/graalvm:6.6.0"
 
 [[dependencies]]
   uri = "docker://gcr.io/paketo-buildpacks/leiningen:3.5.0"
