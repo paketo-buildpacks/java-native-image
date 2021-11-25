@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-api = "0.6"
+api = "0.7"
 
 [buildpack]
   description = "A Cloud Native Buildpack with an order definition suitable for Java native image applications"
@@ -44,6 +44,11 @@ api = "0.6"
   [[order.group]]
     id = "paketo-buildpacks/graalvm"
     version = "6.7.0"
+
+  [[order.group]]
+    id = "paketo-buildpacks/syft"
+    optional = true
+    version = "1.0.0"
 
   [[order.group]]
     id = "paketo-buildpacks/leiningen"

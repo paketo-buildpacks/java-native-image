@@ -9,6 +9,9 @@
   uri = "docker://gcr.io/paketo-buildpacks/graalvm:6.7.0"
 
 [[dependencies]]
+  uri = "docker://gcr.io/paketo-buildpacks/syft:1.0.0"
+
+[[dependencies]]
   uri = "docker://gcr.io/paketo-buildpacks/leiningen:3.5.0"
 
 [[dependencies]]
