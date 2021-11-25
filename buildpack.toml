@@ -43,7 +43,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/graalvm"
-    version = "6.7.0"
+    version = "7.0.0"
 
   [[order.group]]
     id = "paketo-buildpacks/syft"
