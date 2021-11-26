@@ -82,7 +82,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/native-image"
-    version = "4.3.2"
+    version = "5.0.0"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"

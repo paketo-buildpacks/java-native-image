@@ -30,7 +30,7 @@
   uri = "docker://gcr.io/paketo-buildpacks/spring-boot:5.0.0"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/native-image:4.3.2"
+  uri = "docker://gcr.io/paketo-buildpacks/native-image:5.0.0"
 
 [[dependencies]]
   uri = "docker://gcr.io/paketo-buildpacks/procfile:4.4.1"
