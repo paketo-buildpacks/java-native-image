@@ -9,7 +9,7 @@
   uri = "docker://gcr.io/paketo-buildpacks/bellsoft-liberica:9.0.1"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/syft:1.0.1"
+  uri = "docker://gcr.io/paketo-buildpacks/syft:1.1.0"
 
 [[dependencies]]
   uri = "docker://gcr.io/paketo-buildpacks/leiningen:4.0.1"
@@ -27,7 +27,7 @@
   uri = "docker://gcr.io/paketo-buildpacks/executable-jar:6.0.1"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/spring-boot:5.1.0"
+  uri = "docker://gcr.io/paketo-buildpacks/spring-boot:5.2.0"
 
 [[dependencies]]
   uri = "docker://gcr.io/paketo-buildpacks/native-image:5.0.1"
