@@ -5,7 +5,7 @@ The Paketo Java Native Image Buildpack is a Cloud Native Buildpack with an order
 * [`paketo-buildpacks/ca-certificates`](https://github.com/paketo-buildpacks/ca-certificates)
 * [`paketo-buildpacks/environment-variables`](https://github.com/paketo-buildpacks/environment-variables)
 * [`paketo-buildpacks/executable-jar`](https://github.com/paketo-buildpacks/executable-jar)
-* [`paketo-buildpacks/graalvm`](https://github.com/paketo-buildpacks/graalvm)
+* [`paketo-buildpacks/bellsoft-liberica`](https://github.com/paketo-buildpacks/bellsoft-liberica)
 * [`paketo-buildpacks/gradle`](https://github.com/paketo-buildpacks/gradle)
 * [`paketo-buildpacks/image-labels`](https://github.com/paketo-buildpacks/image-labels)
 * [`paketo-buildpacks/leiningen`](https://github.com/paketo-buildpacks/leiningen)

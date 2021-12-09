@@ -42,8 +42,8 @@ api = "0.7"
     version = "3.0.0"
 
   [[order.group]]
-    id = "paketo-buildpacks/graalvm"
-    version = "7.1.0"
+    id = "paketo-buildpacks/bellsoft-liberica"
+    version = "9.0.1"
 
   [[order.group]]
     id = "paketo-buildpacks/syft"
