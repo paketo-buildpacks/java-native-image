@@ -43,7 +43,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/bellsoft-liberica"
-    version = "9.0.1"
+    version = "9.0.2"
 
   [[order.group]]
     id = "paketo-buildpacks/syft"
@@ -73,21 +73,21 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/executable-jar"
     optional = true
-    version = "6.0.1"
+    version = "6.0.2"
 
   [[order.group]]
     id = "paketo-buildpacks/spring-boot"
     optional = true
-    version = "5.2.0"
+    version = "5.3.0"
 
   [[order.group]]
     id = "paketo-buildpacks/native-image"
-    version = "5.0.1"
+    version = "5.0.2"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
     optional = true
-    version = "5.0.1"
+    version = "5.0.2"
 
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
