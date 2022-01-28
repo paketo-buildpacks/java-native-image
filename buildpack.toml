@@ -53,7 +53,7 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/leiningen"
     optional = true
-    version = "4.0.2"
+    version = "4.0.3"
 
   [[order.group]]
     id = "paketo-buildpacks/gradle"
@@ -63,22 +63,22 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/maven"
     optional = true
-    version = "6.1.0"
+    version = "6.1.1"
 
   [[order.group]]
     id = "paketo-buildpacks/sbt"
     optional = true
-    version = "6.1.0"
+    version = "6.1.1"
 
   [[order.group]]
     id = "paketo-buildpacks/executable-jar"
     optional = true
-    version = "6.0.2"
+    version = "6.0.3"
 
   [[order.group]]
     id = "paketo-buildpacks/spring-boot"
     optional = true
-    version = "5.3.1"
+    version = "5.4.0"
 
   [[order.group]]
     id = "paketo-buildpacks/native-image"
