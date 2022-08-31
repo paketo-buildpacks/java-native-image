@@ -19,7 +19,7 @@ api = "0.7"
   homepage = "https://paketo.io/docs/howto/java/#build-an-app-as-a-graalvm-native-image-application"
   id = "paketo-buildpacks/java-native-image"
   keywords = ["java", "composite", "native-image"]
-  name = "Paketo Java Native Image Buildpack"
+  name = "Paketo Buildpack for Java Native Image"
   version = "{{.version}}"
 
   [[buildpack.licenses]]
