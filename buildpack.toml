@@ -48,7 +48,7 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/syft"
     optional = true
-    version = "1.21.0"
+    version = "1.22.0"
 
   [[order.group]]
     id = "paketo-buildpacks/leiningen"
@@ -78,7 +78,7 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/spring-boot"
     optional = true
-    version = "5.19.0"
+    version = "5.20.0"
 
   [[order.group]]
     id = "paketo-buildpacks/native-image"
