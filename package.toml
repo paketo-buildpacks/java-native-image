@@ -8,7 +8,7 @@
   uri = "docker://gcr.io/paketo-buildpacks/bellsoft-liberica:10.2.7"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/syft:1.32.1"
+  uri = "docker://gcr.io/paketo-buildpacks/syft:1.33.0"
 
 [[dependencies]]
   uri = "docker://gcr.io/paketo-buildpacks/leiningen:4.6.4"
