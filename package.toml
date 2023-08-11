@@ -26,7 +26,7 @@
   uri = "docker://gcr.io/paketo-buildpacks/executable-jar:6.7.4"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/spring-boot:5.26.1"
+  uri = "docker://gcr.io/paketo-buildpacks/spring-boot:5.27.0"
 
 [[dependencies]]
   uri = "docker://gcr.io/paketo-buildpacks/datadog:3.16.0"
