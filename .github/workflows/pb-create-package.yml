@@ -38,5 +38,5 @@ jobs:
                 yj-version: 5.1.0
             - name: revert latest
               run: |
-                crane tag docker.io/paketobuildpacks/java-native-image:9.1.0 docker.io/paketobuildpacks/java-native-image:latest
-                crane tag gcr.io/paketo-buildpacks/java-native-image:9.1.0 gcr.io/paketo-buildpacks/java-native-image:latest
+                crane tag docker.io/paketobuildpacks/java-native-image:9.1.0 latest
+                crane tag gcr.io/paketo-buildpacks/java-native-image:9.1.0 latest
