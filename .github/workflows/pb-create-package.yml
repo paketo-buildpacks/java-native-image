@@ -1,8 +1,8 @@
 name: Create Package
 "on":
-    release:
-        types:
-            - published
+    push:
+        branches: "dualarch"
+
 jobs:
     create-package:
         name: Create Package
@@ -71,37 +71,37 @@ jobs:
                     ${{ env.HOME }}/.pack
                     ${{ env.HOME }}/carton-cache
                 restore-keys: ${{ runner.os }}-go-
-            - name: Compute Version
-              id: version
-              run: |
-                #!/usr/bin/env bash
+            # - name: Compute Version
+            #   id: version
+            #   run: |
+            #     #!/usr/bin/env bash
 
-                set -euo pipefail
+            #     set -euo pipefail
 
-                if [[ ${GITHUB_REF:-} != "refs/"* ]]; then
-                  echo "GITHUB_REF set to [${GITHUB_REF:-}], but that is unexpected. It should start with 'refs/*'"
-                  exit 255
-                fi
+            #     if [[ ${GITHUB_REF:-} != "refs/"* ]]; then
+            #       echo "GITHUB_REF set to [${GITHUB_REF:-}], but that is unexpected. It should start with 'refs/*'"
+            #       exit 255
+            #     fi
 
-                if [[ ${GITHUB_REF} =~ refs/tags/v([0-9]+\.[0-9]+\.[0-9]+) ]]; then
-                  VERSION=${BASH_REMATCH[1]}
+            #     if [[ ${GITHUB_REF} =~ refs/tags/v([0-9]+\.[0-9]+\.[0-9]+) ]]; then
+            #       VERSION=${BASH_REMATCH[1]}
 
-                  MAJOR_VERSION="$(echo "${VERSION}" | awk -F '.' '{print $1 }')"
-                  MINOR_VERSION="$(echo "${VERSION}" | awk -F '.' '{print $1 "." $2 }')"
+            #       MAJOR_VERSION="$(echo "${VERSION}" | awk -F '.' '{print $1 }')"
+            #       MINOR_VERSION="$(echo "${VERSION}" | awk -F '.' '{print $1 "." $2 }')"
 
-                  echo "version-major=${MAJOR_VERSION}" >> "$GITHUB_OUTPUT"
-                  echo "version-minor=${MINOR_VERSION}" >> "$GITHUB_OUTPUT"
-                elif [[ ${GITHUB_REF} =~ refs/heads/(.+) ]]; then
-                  VERSION=${BASH_REMATCH[1]}
-                else
-                  VERSION=$(git rev-parse --short HEAD)
-                fi
+            #       echo "version-major=${MAJOR_VERSION}" >> "$GITHUB_OUTPUT"
+            #       echo "version-minor=${MINOR_VERSION}" >> "$GITHUB_OUTPUT"
+            #     elif [[ ${GITHUB_REF} =~ refs/heads/(.+) ]]; then
+            #       VERSION=${BASH_REMATCH[1]}
+            #     else
+            #       VERSION=$(git rev-parse --short HEAD)
+            #     fi
 
-                echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
-                echo "Selected ${VERSION} from
-                  * ref: ${GITHUB_REF}
-                  * sha: ${GITHUB_SHA}
-                "
+            #     echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+            #     echo "Selected ${VERSION} from
+            #       * ref: ${GITHUB_REF}
+            #       * sha: ${GITHUB_SHA}
+            #     "
             - name: Create Package
               run: |
                 #!/usr/bin/env bash
@@ -145,7 +145,7 @@ jobs:
                 #!/usr/bin/env bash
 
                 set -euo pipefail
-
+                
                 COMPILED_BUILDPACK="${HOME}/buildpack"
 
                 # create-package puts the buildpack here, we need to run from that directory
@@ -159,7 +159,10 @@ jobs:
                 PACKAGE_LIST=($PACKAGES)
                 # Extract first repo (Docker Hub) as the main to package & register
                 PACKAGE=${PACKAGE_LIST[0]}
-
+                
+                # because current pack exp. will keep on piling up layers if you directly publish to an existing tag
+                crane delete "${PACKAGE}:${VERSION}"
+ 
                 if [[ "${PUBLISH:-x}" == "true" ]]; then
                   pack -v buildpack package \
                     "${PACKAGE}:${VERSION}" ${CONFIG} \
@@ -169,7 +172,7 @@ jobs:
                     crane tag "${PACKAGE}:${VERSION}" "${VERSION_MINOR}"
                     crane tag "${PACKAGE}:${VERSION}" "${VERSION_MAJOR}"
                   fi
-                  crane tag "${PACKAGE}:${VERSION}" latest
+                  # crane tag "${PACKAGE}:${VERSION}" latest
                   echo "digest=$(crane digest "${PACKAGE}:${VERSION}")" >> "$GITHUB_OUTPUT"
 
                   # copy to other repositories specified
@@ -181,7 +184,7 @@ jobs:
                            crane tag "${P}:${VERSION}" "${VERSION_MINOR}"
                            crane tag "${P}:${VERSION}" "${VERSION_MAJOR}"
                         fi
-                        crane tag "${P}:${VERSION}" latest
+                        # crane tag "${P}:${VERSION}" latest
                       fi
                     done
 
@@ -193,35 +196,33 @@ jobs:
               env:
                 PACKAGES: docker.io/paketobuildpacks/java-native-image gcr.io/paketo-buildpacks/java-native-image
                 PUBLISH: "true"
-                VERSION: ${{ steps.version.outputs.version }}
-                VERSION_MAJOR: ${{ steps.version.outputs.version-major }}
-                VERSION_MINOR: ${{ steps.version.outputs.version-minor }}
-            - name: Update release with digest
-              run: |
-                #!/usr/bin/env bash
+                VERSION: "beta"
+            # - name: Update release with digest
+            #   run: |
+            #     #!/usr/bin/env bash
 
-                set -euo pipefail
+            #     set -euo pipefail
 
-                PAYLOAD=$(cat "${GITHUB_EVENT_PATH}")
+            #     PAYLOAD=$(cat "${GITHUB_EVENT_PATH}")
 
-                RELEASE_ID=$(jq -n -r --argjson PAYLOAD "${PAYLOAD}" '$PAYLOAD.release.id')
-                RELEASE_TAG_NAME=$(jq -n -r --argjson PAYLOAD "${PAYLOAD}" '$PAYLOAD.release.tag_name')
-                RELEASE_NAME=$(jq -n -r --argjson PAYLOAD "${PAYLOAD}" '$PAYLOAD.release.name')
-                RELEASE_BODY=$(jq -n -r --argjson PAYLOAD "${PAYLOAD}" '$PAYLOAD.release.body')
+            #     RELEASE_ID=$(jq -n -r --argjson PAYLOAD "${PAYLOAD}" '$PAYLOAD.release.id')
+            #     RELEASE_TAG_NAME=$(jq -n -r --argjson PAYLOAD "${PAYLOAD}" '$PAYLOAD.release.tag_name')
+            #     RELEASE_NAME=$(jq -n -r --argjson PAYLOAD "${PAYLOAD}" '$PAYLOAD.release.name')
+            #     RELEASE_BODY=$(jq -n -r --argjson PAYLOAD "${PAYLOAD}" '$PAYLOAD.release.body')
 
-                gh api \
-                  --method PATCH \
-                  "/repos/:owner/:repo/releases/${RELEASE_ID}" \
-                  --field "tag_name=${RELEASE_TAG_NAME}" \
-                  --field "name=${RELEASE_NAME}" \
-                  --field "body=${RELEASE_BODY//<!-- DIGEST PLACEHOLDER -->/\`${DIGEST}\`}"
-              env:
-                DIGEST: ${{ steps.package.outputs.digest }}
-                GITHUB_TOKEN: ${{ secrets.PAKETO_BOT_GITHUB_TOKEN }}
-            - if: ${{ true }}
-              uses: docker://ghcr.io/buildpacks/actions/registry/request-add-entry:5.5.3
-              with:
-                address: docker.io/paketobuildpacks/java-native-image@${{ steps.package.outputs.digest }}
-                id: paketo-buildpacks/java-native-image
-                token: ${{ secrets.PAKETO_BOT_GITHUB_TOKEN }}
-                version: ${{ steps.version.outputs.version }}
+            #     gh api \
+            #       --method PATCH \
+            #       "/repos/:owner/:repo/releases/${RELEASE_ID}" \
+            #       --field "tag_name=${RELEASE_TAG_NAME}" \
+            #       --field "name=${RELEASE_NAME}" \
+            #       --field "body=${RELEASE_BODY//<!-- DIGEST PLACEHOLDER -->/\`${DIGEST}\`}"
+            #   env:
+            #     DIGEST: ${{ steps.package.outputs.digest }}
+            #     GITHUB_TOKEN: ${{ secrets.PAKETO_BOT_GITHUB_TOKEN }}
+            # - if: ${{ true }}
+            #   uses: docker://ghcr.io/buildpacks/actions/registry/request-add-entry:5.5.3
+            #   with:
+            #     address: docker.io/paketobuildpacks/java-native-image@${{ steps.package.outputs.digest }}
+            #     id: paketo-buildpacks/java-native-image
+            #     token: ${{ secrets.PAKETO_BOT_GITHUB_TOKEN }}
+            #     version: ${{ steps.version.outputs.version }}
