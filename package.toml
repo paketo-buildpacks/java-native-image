@@ -38,7 +38,7 @@
   uri = "docker://gcr.io/paketo-buildpacks/procfile:5.8.0"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/environment-variables:4.5.7"
+  uri = "docker://gcr.io/paketo-buildpacks/environment-variables:4.6.0"
 
 [[dependencies]]
   uri = "docker://gcr.io/paketo-buildpacks/image-labels:4.6.0"
