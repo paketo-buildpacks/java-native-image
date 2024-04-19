@@ -41,7 +41,7 @@
   uri = "docker://gcr.io/paketo-buildpacks/environment-variables:4.5.7"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/image-labels:4.5.6"
+  uri = "docker://gcr.io/paketo-buildpacks/image-labels:4.6.0"
 
 [[targets]]
   arch = "amd64"
