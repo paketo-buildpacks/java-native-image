@@ -35,7 +35,7 @@
   uri = "docker://gcr.io/paketo-buildpacks/native-image:5.14.1"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/procfile:5.9.0"
+  uri = "docker://gcr.io/paketo-buildpacks/procfile:5.9.1"
 
 [[dependencies]]
   uri = "docker://gcr.io/paketo-buildpacks/environment-variables:4.7.0"
