@@ -83,7 +83,7 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/datadog"
     optional = true
-    version = "5.18.0"
+    version = "5.20.0"
 
   [[order.group]]
     id = "paketo-buildpacks/native-image"
