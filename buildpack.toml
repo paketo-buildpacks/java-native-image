@@ -16,7 +16,7 @@ api = "0.7"
 
 [buildpack]
   description = "A Cloud Native Buildpack with an order definition suitable for Java native image applications"
-  homepage = "https://paketo.io/docs/howto/java/#build-an-app-as-a-graalvm-native-image-application"
+  homepage = "https://github.com/paketo-buildpacks/java-native-image"
   id = "paketo-buildpacks/java-native-image"
   keywords = ["java", "composite", "native-image"]
   name = "Paketo Buildpack for Java Native Image"
