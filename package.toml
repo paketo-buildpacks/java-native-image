@@ -23,7 +23,7 @@
   uri = "docker://gcr.io/paketo-buildpacks/sbt:6.16.2"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/executable-jar:6.11.2"
+  uri = "docker://gcr.io/paketo-buildpacks/executable-jar:6.11.3"
 
 [[dependencies]]
   uri = "docker://gcr.io/paketo-buildpacks/spring-boot:5.31.2"
