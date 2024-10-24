@@ -20,7 +20,7 @@
   uri = "docker://gcr.io/paketo-buildpacks/maven:6.18.3"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/sbt:6.16.2"
+  uri = "docker://gcr.io/paketo-buildpacks/sbt:6.17.0"
 
 [[dependencies]]
   uri = "docker://gcr.io/paketo-buildpacks/executable-jar:6.11.3"
