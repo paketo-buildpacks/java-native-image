@@ -32,7 +32,7 @@
   uri = "docker://gcr.io/paketo-buildpacks/datadog:5.25.1"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/native-image:5.14.4"
+  uri = "docker://gcr.io/paketo-buildpacks/native-image:5.15.0"
 
 [[dependencies]]
   uri = "docker://gcr.io/paketo-buildpacks/procfile:5.10.1"
