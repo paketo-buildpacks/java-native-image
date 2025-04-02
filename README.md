@@ -1,4 +1,8 @@
-# `gcr.io/paketo-buildpacks/java-native-image`
+# Paketo Buildpack for Java Native Image
+
+## Buildpack ID: `paketo-buildpacks/java-native-image`
+## Registry URLs: `docker.io/paketobuildpacks/java-native-image`
+
 The Paketo Buildpack for Java Native Image is a Cloud Native Buildpack with an order definition suitable for Java native image applications.
 
 ## Included Buildpacks
