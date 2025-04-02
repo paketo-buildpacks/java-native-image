@@ -1,47 +1,47 @@
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/ca-certificates:3.10.0"
+  uri = "docker://docker.io/paketo-buildpacks/ca-certificates:3.10.0"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/upx:3.8.0"
+  uri = "docker://docker.io/paketo-buildpacks/upx:3.8.0"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/bellsoft-liberica:11.2.0"
+  uri = "docker://docker.io/paketo-buildpacks/bellsoft-liberica:11.2.0"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/syft:2.10.0"
+  uri = "docker://docker.io/paketo-buildpacks/syft:2.10.0"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/leiningen:4.12.0"
+  uri = "docker://docker.io/paketo-buildpacks/leiningen:4.12.0"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/gradle:7.18.0"
+  uri = "docker://docker.io/paketo-buildpacks/gradle:7.18.0"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/maven:6.20.0"
+  uri = "docker://docker.io/paketo-buildpacks/maven:6.20.0"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/sbt:6.18.1"
+  uri = "docker://docker.io/paketo-buildpacks/sbt:6.18.1"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/executable-jar:6.13.0"
+  uri = "docker://docker.io/paketo-buildpacks/executable-jar:6.13.0"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/spring-boot:5.33.0"
+  uri = "docker://docker.io/paketo-buildpacks/spring-boot:5.33.0"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/datadog:5.31.1"
+  uri = "docker://docker.io/paketo-buildpacks/datadog:5.31.1"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/native-image:5.16.0"
+  uri = "docker://docker.io/paketo-buildpacks/native-image:5.16.0"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/procfile:5.11.0"
+  uri = "docker://docker.io/paketo-buildpacks/procfile:5.11.0"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/environment-variables:4.9.0"
+  uri = "docker://docker.io/paketo-buildpacks/environment-variables:4.9.0"
 
 [[dependencies]]
-  uri = "docker://gcr.io/paketo-buildpacks/image-labels:4.9.0"
+  uri = "docker://docker.io/paketo-buildpacks/image-labels:4.9.0"
 
 [[targets]]
   arch = "amd64"
