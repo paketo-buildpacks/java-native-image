@@ -1,5 +1,5 @@
 [[dependencies]]
-  uri = "docker://docker.io/paketo-buildpacks/ca-certificates:3.10.0"
+  uri = "docker://docker.io/paketobuildpacks/ca-certificates:3.10.0"
 
 [[dependencies]]
   uri = "docker://docker.io/paketo-buildpacks/upx:3.8.0"
