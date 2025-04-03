@@ -81,18 +81,19 @@ jobs:
                 echo "new-version=${NEW_VERSION}" >> "$GITHUB_OUTPUT"
                 echo "version-label=${LABEL}" >> "$GITHUB_OUTPUT"
               env:
-                DEPENDENCY: gcr.io/paketo-buildpacks/gradle
+                BP_DEPENDENCY: docker.io/paketo-buildpacks/gradle
+                DEPENDENCY: docker.io/paketobuildpacks/gradle
             - uses: peter-evans/create-pull-request@v6
               with:
                 author: ${{ secrets.JAVA_GITHUB_USERNAME }} <${{ secrets.JAVA_GITHUB_USERNAME }}@users.noreply.github.com>
-                body: Bumps [`gcr.io/paketo-buildpacks/gradle`](https://gcr.io/paketo-buildpacks/gradle) from [`${{ steps.package.outputs.old-version }}`](https://gcr.io/paketo-buildpacks/gradle:${{ steps.package.outputs.old-version }}) to [`${{ steps.package.outputs.new-version }}`](https://gcr.io/paketo-buildpacks/gradle:${{ steps.package.outputs.new-version }}).
+                body: Bumps [`docker.io/paketobuildpacks/gradle`](https://docker.io/paketobuildpacks/gradle) from [`${{ steps.package.outputs.old-version }}`](https://docker.io/paketobuildpacks/gradle:${{ steps.package.outputs.old-version }}) to [`${{ steps.package.outputs.new-version }}`](https://docker.io/paketobuildpacks/gradle:${{ steps.package.outputs.new-version }}).
                 branch: update/package/gradle
                 commit-message: |-
-                    Bump gcr.io/paketo-buildpacks/gradle from ${{ steps.package.outputs.old-version }} to ${{ steps.package.outputs.new-version }}
+                    Bump docker.io/paketobuildpacks/gradle from ${{ steps.package.outputs.old-version }} to ${{ steps.package.outputs.new-version }}
 
-                    Bumps gcr.io/paketo-buildpacks/gradle from ${{ steps.package.outputs.old-version }} to ${{ steps.package.outputs.new-version }}.
+                    Bumps docker.io/paketobuildpacks/gradle from ${{ steps.package.outputs.old-version }} to ${{ steps.package.outputs.new-version }}.
                 delete-branch: true
                 labels: ${{ steps.package.outputs.version-label }}, type:dependency-upgrade
                 signoff: true
-                title: Bump gcr.io/paketo-buildpacks/gradle from ${{ steps.package.outputs.old-version }} to ${{ steps.package.outputs.new-version }}
+                title: Bump docker.io/paketobuildpacks/gradle from ${{ steps.package.outputs.old-version }} to ${{ steps.package.outputs.new-version }}
                 token: ${{ secrets.PAKETO_BOT_GITHUB_TOKEN }}
