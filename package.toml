@@ -29,7 +29,7 @@
   uri = "docker://docker.io/paketobuildpacks/spring-boot:5.33.0"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/datadog:5.31.1"
+  uri = "docker://docker.io/paketobuildpacks/datadog:5.32.1"
 
 [[dependencies]]
   uri = "docker://docker.io/paketobuildpacks/native-image:5.16.0"
