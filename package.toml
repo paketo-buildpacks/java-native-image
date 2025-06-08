@@ -5,7 +5,7 @@
   uri = "docker://docker.io/paketobuildpacks/upx:3.8.0"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/bellsoft-liberica:11.2.2"
+  uri = "docker://docker.io/paketobuildpacks/bellsoft-liberica:11.2.3"
 
 [[dependencies]]
   uri = "docker://docker.io/paketobuildpacks/syft:2.13.0"
