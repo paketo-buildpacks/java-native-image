@@ -14,7 +14,7 @@
   uri = "docker://docker.io/paketobuildpacks/leiningen:4.12.1"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/gradle:7.19.2"
+  uri = "docker://docker.io/paketobuildpacks/gradle:7.19.3"
 
 [[dependencies]]
   uri = "docker://docker.io/paketobuildpacks/maven:6.20.1"
