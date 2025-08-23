@@ -11,7 +11,7 @@
   uri = "docker://docker.io/paketobuildpacks/syft:2.18.1"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/leiningen:4.12.2"
+  uri = "docker://docker.io/paketobuildpacks/leiningen:4.12.3"
 
 [[dependencies]]
   uri = "docker://docker.io/paketobuildpacks/gradle:7.19.4"
