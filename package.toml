@@ -23,7 +23,7 @@
   uri = "docker://docker.io/paketobuildpacks/sbt:6.19.10"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/executable-jar:6.13.4"
+  uri = "docker://docker.io/paketobuildpacks/executable-jar:6.14.0"
 
 [[dependencies]]
   uri = "docker://docker.io/paketobuildpacks/spring-boot:5.33.5"
