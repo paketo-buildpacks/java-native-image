@@ -8,7 +8,7 @@
   uri = "docker://docker.io/paketobuildpacks/bellsoft-liberica:11.5.1"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/syft:2.26.0"
+  uri = "docker://docker.io/paketobuildpacks/syft:2.28.1"
 
 [[dependencies]]
   uri = "docker://docker.io/paketobuildpacks/leiningen:4.14.0"
