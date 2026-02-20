@@ -39,7 +39,7 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/upx"
     optional = true
-    version = "4.0.1"
+    version = "4.1.0"
 
   [[order.group]]
     id = "paketo-buildpacks/bellsoft-liberica"
