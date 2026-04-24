@@ -32,7 +32,7 @@
   uri = "docker://docker.io/paketobuildpacks/datadog:6.9.0"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/native-image:5.18.1"
+  uri = "docker://docker.io/paketobuildpacks/native-image:5.18.2"
 
 [[dependencies]]
   uri = "docker://docker.io/paketobuildpacks/procfile:5.13.1"
