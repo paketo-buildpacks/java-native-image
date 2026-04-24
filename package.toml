@@ -26,7 +26,7 @@
   uri = "docker://docker.io/paketobuildpacks/executable-jar:6.15.1"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/spring-boot:5.36.1"
+  uri = "docker://docker.io/paketobuildpacks/spring-boot:5.36.2"
 
 [[dependencies]]
   uri = "docker://docker.io/paketobuildpacks/datadog:6.9.0"
