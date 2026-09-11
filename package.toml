@@ -35,7 +35,7 @@
   uri = "docker://docker.io/paketobuildpacks/native-image:5.19.0"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/procfile:5.13.7"
+  uri = "docker://docker.io/paketobuildpacks/procfile:5.14.0"
 
 [[dependencies]]
   uri = "docker://docker.io/paketobuildpacks/environment-variables:4.12.0"
