@@ -1,6 +1,6 @@
 module github.com/paketo-buildpacks/java-native-image
 
-go 1.27.2
+go 1.27.3
 
 require (
 	github.com/onsi/gomega v1.44.0
