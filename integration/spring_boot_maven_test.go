@@ -62,7 +62,7 @@ func testSpringBootMaven(t *testing.T, context spec.G, it spec.S) {
 					"BP_JVM_VERSION":           "25",
 				}).
 				WithTrustBuilder().
-				WithPullPolicy("if-not-present").
+				WithPullPolicy("never").
 				Execute(name, source)
 			Expect(err).NotTo(HaveOccurred(), buildLogs.String())
 

@@ -65,7 +65,7 @@ func testQuarkus(t *testing.T, context spec.G, it spec.S) {
 					"BP_NATIVE_IMAGE_BUILT_ARTIFACT":       "native-sources/getting-started-*-runner.jar",
 				}).
 				WithTrustBuilder().
-				WithPullPolicy("if-not-present").
+				WithPullPolicy("never").
 				Execute(name, source)
 			Expect(err).NotTo(HaveOccurred(), buildLogs.String())
 

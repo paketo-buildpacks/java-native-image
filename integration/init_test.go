@@ -27,7 +27,7 @@ func TestIntegration(t *testing.T) {
 	format.MaxLength = 0
 	SetDefaultEventuallyTimeout(60 * time.Second)
 
-	suite := spec.New("java-native-image", spec.Parallel(), spec.Report(report.Terminal{}))
+	suite := spec.New("Integration", spec.Parallel(), spec.Report(report.Terminal{}))
 	suite("SpringBootMaven", testSpringBootMaven)
 	suite("SpringBootGradle", testSpringBootGradle)
 	suite("Quarkus", testQuarkus)
