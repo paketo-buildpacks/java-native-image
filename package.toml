@@ -9,7 +9,7 @@
   uri = "docker://docker.io/paketobuildpacks/upx:4.3.11"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/bellsoft-liberica:11.10.2"
+  uri = "docker://docker.io/paketobuildpacks/bellsoft-liberica:11.10.3"
 
 [[dependencies]]
   uri = "docker://docker.io/paketobuildpacks/syft:2.43.3"
