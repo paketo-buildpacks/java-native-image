@@ -20,3 +20,5 @@ scratch/
 
 integration/samples/
 
+/.bin
+/build
