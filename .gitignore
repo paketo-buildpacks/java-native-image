@@ -18,3 +18,7 @@ dependencies/
 package/
 scratch/
 
+integration/samples/
+
+/.bin
+/build
