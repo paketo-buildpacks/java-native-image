@@ -29,7 +29,7 @@ api = "0.7"
 
   [[order.group]]
     id = "paketo-buildpacks/bellsoft-liberica"
-    version = "11.10.4"
+    version = "11.10.5"
 
   [[order.group]]
     id = "paketo-buildpacks/syft"
@@ -54,7 +54,7 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/sbt"
     optional = true
-    version = "6.25.3"
+    version = "6.25.4"
 
   [[order.group]]
     id = "paketo-buildpacks/executable-jar"
