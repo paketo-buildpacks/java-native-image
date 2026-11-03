@@ -9,7 +9,7 @@
   uri = "docker://docker.io/paketobuildpacks/upx:4.3.12"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/bellsoft-liberica:11.10.4"
+  uri = "docker://docker.io/paketobuildpacks/bellsoft-liberica:11.10.5"
 
 [[dependencies]]
   uri = "docker://docker.io/paketobuildpacks/syft:2.43.4"
@@ -24,7 +24,7 @@
   uri = "docker://docker.io/paketobuildpacks/maven:6.26.0"
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/sbt:6.25.3"
+  uri = "docker://docker.io/paketobuildpacks/sbt:6.25.4"
 
 [[dependencies]]
   uri = "docker://docker.io/paketobuildpacks/executable-jar:6.17.5"
