@@ -20,12 +20,12 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/ca-certificates"
     optional = true
-    version = "3.14.4"
+    version = "3.14.5"
 
   [[order.group]]
     id = "paketo-buildpacks/upx"
     optional = true
-    version = "4.3.12"
+    version = "4.3.13"
 
   [[order.group]]
     id = "paketo-buildpacks/bellsoft-liberica"
@@ -34,12 +34,12 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/syft"
     optional = true
-    version = "2.43.4"
+    version = "2.43.5"
 
   [[order.group]]
     id = "paketo-buildpacks/leiningen"
     optional = true
-    version = "4.17.6"
+    version = "4.17.7"
 
   [[order.group]]
     id = "paketo-buildpacks/gradle"
@@ -59,33 +59,33 @@ api = "0.7"
   [[order.group]]
     id = "paketo-buildpacks/executable-jar"
     optional = true
-    version = "6.17.5"
+    version = "6.17.6"
 
   [[order.group]]
     id = "paketo-buildpacks/spring-boot"
     optional = true
-    version = "5.40.4"
+    version = "5.40.5"
 
   [[order.group]]
     id = "paketo-buildpacks/datadog"
     optional = true
-    version = "6.15.1"
+    version = "6.15.2"
 
   [[order.group]]
     id = "paketo-buildpacks/native-image"
-    version = "5.19.1"
+    version = "5.19.2"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
     optional = true
-    version = "5.15.6"
+    version = "5.15.7"
 
   [[order.group]]
     id = "paketo-buildpacks/environment-variables"
     optional = true
-    version = "4.12.1"
+    version = "4.12.2"
 
   [[order.group]]
     id = "paketo-buildpacks/image-labels"
     optional = true
-    version = "4.14.5"
+    version = "4.14.6"
