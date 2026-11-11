@@ -1,56 +1,55 @@
-
 [buildpack]
-  uri = "build/buildpack.tgz"
+uri = 'build/buildpack.tgz'
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/ca-certificates:3.14.5"
+uri = 'docker://docker.io/paketobuildpacks/ca-certificates:3.14.6'
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/upx:4.3.13"
+uri = 'docker://docker.io/paketobuildpacks/upx:4.3.14'
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/bellsoft-liberica:11.10.5"
+uri = 'docker://docker.io/paketobuildpacks/bellsoft-liberica:11.10.5'
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/syft:2.43.5"
+uri = 'docker://docker.io/paketobuildpacks/syft:2.43.6'
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/leiningen:4.17.7"
+uri = 'docker://docker.io/paketobuildpacks/leiningen:4.17.8'
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/gradle:8.10.0"
+uri = 'docker://docker.io/paketobuildpacks/gradle:8.10.0'
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/maven:6.26.0"
+uri = 'docker://docker.io/paketobuildpacks/maven:6.26.0'
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/sbt:6.25.4"
+uri = 'docker://docker.io/paketobuildpacks/sbt:6.25.4'
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/executable-jar:6.17.6"
+uri = 'docker://docker.io/paketobuildpacks/executable-jar:6.17.7'
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/spring-boot:5.40.5"
+uri = 'docker://docker.io/paketobuildpacks/spring-boot:5.40.6'
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/datadog:6.15.2"
+uri = 'docker://docker.io/paketobuildpacks/datadog:6.15.3'
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/native-image:5.19.2"
+uri = 'docker://docker.io/paketobuildpacks/native-image:5.19.3'
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/procfile:5.15.7"
+uri = 'docker://docker.io/paketobuildpacks/procfile:5.15.8'
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/environment-variables:4.12.2"
+uri = 'docker://docker.io/paketobuildpacks/environment-variables:4.12.3'
 
 [[dependencies]]
-  uri = "docker://docker.io/paketobuildpacks/image-labels:4.14.6"
+uri = 'docker://docker.io/paketobuildpacks/image-labels:4.14.7'
 
 [[targets]]
-  arch = "amd64"
-  os = "linux"
+os = 'linux'
+arch = 'amd64'
 
 [[targets]]
-  arch = "arm64"
-  os = "linux"
+os = 'linux'
+arch = 'arm64'
