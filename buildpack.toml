@@ -1,91 +1,90 @@
-api = "0.7"
+api = '0.7'
 
 [buildpack]
-  description = "A Cloud Native Buildpack with an order definition suitable for Java native image applications"
-  homepage = "https://github.com/paketo-buildpacks/java-native-image"
-  id = "paketo-buildpacks/java-native-image"
-  keywords = ["java", "composite", "native-image"]
-  name = "Paketo Buildpack for Java Native Image"
-  version = "{{.version}}"
+description = 'A Cloud Native Buildpack with an order definition suitable for Java native image applications'
+homepage = 'https://github.com/paketo-buildpacks/java-native-image'
+id = 'paketo-buildpacks/java-native-image'
+keywords = ['java', 'composite', 'native-image']
+name = 'Paketo Buildpack for Java Native Image'
+version = '{{.version}}'
 
-  [[buildpack.licenses]]
-    type = "Apache-2.0"
-    uri = "https://github.com/paketo-buildpacks/java/blob/main/LICENSE"
+[[buildpack.licenses]]
+type = 'Apache-2.0'
+uri = 'https://github.com/paketo-buildpacks/java/blob/main/LICENSE'
 
 [metadata]
-  include-files = ["LICENSE", "NOTICE", "README.md", "buildpack.toml"]
+include-files = ['LICENSE', 'NOTICE', 'README.md', 'buildpack.toml']
 
 [[order]]
+[[order.group]]
+id = 'paketo-buildpacks/ca-certificates'
+version = '3.14.6'
+optional = true
 
-  [[order.group]]
-    id = "paketo-buildpacks/ca-certificates"
-    optional = true
-    version = "3.14.5"
+[[order.group]]
+id = 'paketo-buildpacks/upx'
+version = '4.3.14'
+optional = true
 
-  [[order.group]]
-    id = "paketo-buildpacks/upx"
-    optional = true
-    version = "4.3.13"
+[[order.group]]
+id = 'paketo-buildpacks/bellsoft-liberica'
+version = '11.10.5'
 
-  [[order.group]]
-    id = "paketo-buildpacks/bellsoft-liberica"
-    version = "11.10.5"
+[[order.group]]
+id = 'paketo-buildpacks/syft'
+version = '2.43.6'
+optional = true
 
-  [[order.group]]
-    id = "paketo-buildpacks/syft"
-    optional = true
-    version = "2.43.5"
+[[order.group]]
+id = 'paketo-buildpacks/leiningen'
+version = '4.17.8'
+optional = true
 
-  [[order.group]]
-    id = "paketo-buildpacks/leiningen"
-    optional = true
-    version = "4.17.7"
+[[order.group]]
+id = 'paketo-buildpacks/gradle'
+version = '8.10.0'
+optional = true
 
-  [[order.group]]
-    id = "paketo-buildpacks/gradle"
-    optional = true
-    version = "8.10.0"
+[[order.group]]
+id = 'paketo-buildpacks/maven'
+version = '6.26.0'
+optional = true
 
-  [[order.group]]
-    id = "paketo-buildpacks/maven"
-    optional = true
-    version = "6.26.0"
+[[order.group]]
+id = 'paketo-buildpacks/sbt'
+version = '6.25.4'
+optional = true
 
-  [[order.group]]
-    id = "paketo-buildpacks/sbt"
-    optional = true
-    version = "6.25.4"
+[[order.group]]
+id = 'paketo-buildpacks/executable-jar'
+version = '6.17.7'
+optional = true
 
-  [[order.group]]
-    id = "paketo-buildpacks/executable-jar"
-    optional = true
-    version = "6.17.6"
+[[order.group]]
+id = 'paketo-buildpacks/spring-boot'
+version = '5.40.6'
+optional = true
 
-  [[order.group]]
-    id = "paketo-buildpacks/spring-boot"
-    optional = true
-    version = "5.40.5"
+[[order.group]]
+id = 'paketo-buildpacks/datadog'
+version = '6.15.3'
+optional = true
 
-  [[order.group]]
-    id = "paketo-buildpacks/datadog"
-    optional = true
-    version = "6.15.2"
+[[order.group]]
+id = 'paketo-buildpacks/native-image'
+version = '5.19.3'
 
-  [[order.group]]
-    id = "paketo-buildpacks/native-image"
-    version = "5.19.2"
+[[order.group]]
+id = 'paketo-buildpacks/procfile'
+version = '5.15.8'
+optional = true
 
-  [[order.group]]
-    id = "paketo-buildpacks/procfile"
-    optional = true
-    version = "5.15.7"
+[[order.group]]
+id = 'paketo-buildpacks/environment-variables'
+version = '4.12.3'
+optional = true
 
-  [[order.group]]
-    id = "paketo-buildpacks/environment-variables"
-    optional = true
-    version = "4.12.2"
-
-  [[order.group]]
-    id = "paketo-buildpacks/image-labels"
-    optional = true
-    version = "4.14.6"
+[[order.group]]
+id = 'paketo-buildpacks/image-labels'
+version = '4.14.7'
+optional = true
