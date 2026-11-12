@@ -32,7 +32,7 @@ version = '11.10.5'
 
 [[order.group]]
 id = 'paketo-buildpacks/syft'
-version = '2.43.6'
+version = '2.44.0'
 optional = true
 
 [[order.group]]
