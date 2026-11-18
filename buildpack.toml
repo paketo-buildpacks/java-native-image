@@ -18,7 +18,7 @@ include-files = ['LICENSE', 'NOTICE', 'README.md', 'buildpack.toml']
 [[order]]
 [[order.group]]
 id = 'paketo-buildpacks/ca-certificates'
-version = '3.14.6'
+version = '3.14.7'
 optional = true
 
 [[order.group]]
@@ -32,12 +32,12 @@ version = '11.10.5'
 
 [[order.group]]
 id = 'paketo-buildpacks/syft'
-version = '2.44.0'
+version = '2.44.1'
 optional = true
 
 [[order.group]]
 id = 'paketo-buildpacks/leiningen'
-version = '4.17.8'
+version = '4.17.9'
 optional = true
 
 [[order.group]]
@@ -57,34 +57,34 @@ optional = true
 
 [[order.group]]
 id = 'paketo-buildpacks/executable-jar'
-version = '6.17.7'
+version = '6.17.8'
 optional = true
 
 [[order.group]]
 id = 'paketo-buildpacks/spring-boot'
-version = '5.40.6'
+version = '5.40.7'
 optional = true
 
 [[order.group]]
 id = 'paketo-buildpacks/datadog'
-version = '6.15.3'
+version = '6.15.4'
 optional = true
 
 [[order.group]]
 id = 'paketo-buildpacks/native-image'
-version = '5.19.3'
+version = '5.19.4'
 
 [[order.group]]
 id = 'paketo-buildpacks/procfile'
-version = '5.15.8'
+version = '5.15.9'
 optional = true
 
 [[order.group]]
 id = 'paketo-buildpacks/environment-variables'
-version = '4.12.3'
+version = '4.12.4'
 optional = true
 
 [[order.group]]
 id = 'paketo-buildpacks/image-labels'
-version = '4.14.7'
+version = '4.14.8'
 optional = true
