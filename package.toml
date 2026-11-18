@@ -8,7 +8,7 @@ uri = 'docker://docker.io/paketobuildpacks/ca-certificates:3.14.7'
 uri = 'docker://docker.io/paketobuildpacks/upx:4.3.14'
 
 [[dependencies]]
-uri = 'docker://docker.io/paketobuildpacks/bellsoft-liberica:11.10.5'
+uri = 'docker://docker.io/paketobuildpacks/bellsoft-liberica:11.10.6'
 
 [[dependencies]]
 uri = 'docker://docker.io/paketobuildpacks/syft:2.44.1'

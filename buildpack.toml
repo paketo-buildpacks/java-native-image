@@ -28,7 +28,7 @@ optional = true
 
 [[order.group]]
 id = 'paketo-buildpacks/bellsoft-liberica'
-version = '11.10.5'
+version = '11.10.6'
 
 [[order.group]]
 id = 'paketo-buildpacks/syft'
